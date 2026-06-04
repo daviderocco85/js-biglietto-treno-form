@@ -70,7 +70,7 @@ attachLiveValidation(passengerAge, ageRegex, 120);
 // MOSTRA CARD
 // ===============================
 
-function showResultCard(km, age, finalPrice, discountLabel) {
+   function showResultCard(km, age, finalPrice, discountLabel, baseCostKm) {
     const container = document.getElementById("resultCardContainer");
 
     // Badge dinamico
@@ -80,34 +80,69 @@ function showResultCard(km, age, finalPrice, discountLabel) {
     if (discountLabel.includes("40%")) badgeClass = "badge-over65";
 
     container.innerHTML = `
-        <div class="card mt-4 shadow-sm fade-in">
-            <div class="card-body">
+        <div class="row mt-4 fade-in">
 
-                <!-- LOGO ITALRAIL -->
-                <div class="text-center mb-1">
-                    <img src="assets/img/ItalRail_logo.png" alt="ItalRail Logo" class="card-logo">
+            <!-- COLONNA SINISTRA: CARD PRINCIPALE -->
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <!-- LOGO ITALRAIL -->
+                        <div class="text-center mb-1">
+                            <img src="assets/img/ItalRail_logo.png" alt="ItalRail Logo" class="card-logo">
+                        </div>
+
+                        <h5 class="card-title text-center">Riepilogo Biglietto</h5>
+
+                        <p class="card-text"><strong>Kilometri:</strong> ${km}</p>
+                        <p class="card-text"><strong>Età passeggero:</strong> ${age}</p>
+
+                        <p class="card-text"><strong>Tariffa base:</strong> ${baseCostKm.toFixed(2)} € / km</p>
+
+                        <p class="card-text">
+                            <strong>Sconto applicato:</strong>
+                            <span class="badge ${badgeClass}">${discountLabel}</span>
+                        </p>
+
+                        <hr>
+
+                        <p class="card-text fs-5">
+                            <strong>Prezzo finale:</strong>
+                            <span class="badge bg-primary">${finalPrice.toFixed(2)} €</span>
+                        </p>
+                    </div>
                 </div>
-
-                <h5 class="card-title text-center">Riepilogo Biglietto</h5>
-
-                <p class="card-text"><strong>Kilometri:</strong> ${km}</p>
-                <p class="card-text"><strong>Età passeggero:</strong> ${age}</p>
-
-                <p class="card-text">
-                    <strong>Sconto applicato:</strong>
-                    <span class="badge ${badgeClass}">${discountLabel}</span>
-                </p>
-
-                <hr>
-
-                <p class="card-text fs-5">
-                    <strong>Prezzo finale:</strong>
-                    <span class="badge bg-primary">${finalPrice.toFixed(2)} €</span>
-                </p>
             </div>
+
+            <!-- COLONNA DESTRA: LEGENDA -->
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h6 class="card-title">Legenda Sconti</h6>
+
+                        <p class="card-text mb-1">
+                            <span class="badge badge-under18">20%</span>
+                            <strong> Under 18:</strong> da 0 a 17 anni
+                        </p>
+
+                        <p class="card-text">
+                            <span class="badge badge-over65">40%</span>
+                            <strong> Over 65:</strong> dai 65 anni in su
+                        </p>
+
+                        <hr>
+
+                        <p class="small text-muted">
+                            Gli sconti vengono applicati automaticamente in base all’età inserita sulla tariffa base.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     `;
 }
+
 
 
 // ===============================
@@ -148,7 +183,7 @@ btnInput.addEventListener('click',() => {
     }
 
     // Mostra card
-    showResultCard(km, age, finalPrice, discountLabel);
+    showResultCard(km, age, finalPrice, discountLabel, baseCostKm);
 
    
 });

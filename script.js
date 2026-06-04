@@ -116,14 +116,11 @@ function showResultCard(km, age, finalPrice, discountLabel) {
 
     
 
-btnInput.addEventListener('click',(event) => {
-    event.preventDefault();
-    
+btnInput.addEventListener('click',() => {
    
-
+    
     const kmOk = validateInput(kmTraveled, kmRegex, true);
     const ageOk = validateInput(passengerAge, ageRegex, true, 120);
-
 
 
 // Se uno dei due è sbagliato → blocca tutto
@@ -132,10 +129,7 @@ btnInput.addEventListener('click',(event) => {
         return;
     }
         
-        
-
-
-
+    
     const km = Number(kmTraveled.value.replace(",", "."));
     const age = Number(passengerAge.value);
 

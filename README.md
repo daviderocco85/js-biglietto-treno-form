@@ -2,6 +2,10 @@
 
 A form-based JavaScript program that calculates the train ticket price based on the passenger’s age and the number of kilometers traveled.
 
+# Demo Live
+
+[🌐  **Click here for demo**](https://daviderocco85.github.io/js-biglietto-treno-form/)
+
 
 # Target
 
@@ -24,3 +28,6 @@ The program must determine the applicable discount tier, compute the adjusted fa
 
 3. Apply styling to refine the layout and improve the visual presentation of the form, recap section, and final output.
 
+# How to run
+
+ Clone or download the project, then open index.html in your browser. Enter the kilometers to travel and the passenger’s age in the input fields to run the ticket price calculation.

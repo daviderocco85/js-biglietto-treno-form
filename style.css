@@ -43,11 +43,35 @@ body {
 }
 
 /* Logo grande ma controllato */
+
+/* Mobile default */
 .logo-navbar {
-    height: 120px;          /* altezza reale piccola */
-    transform: scale(2.2); /* ingrandimento visivo */
+    height: 120px; /* altezza reale piccola */
+    transform: scale(1.8); /* ingrandimento visivo */
     transform-origin: center;
 }
+
+/* Tablet */
+@media (min-width: 576px) {
+    .logo-navbar {
+        height: 120px;
+        transform: scale(2.2);
+        transform-origin: center;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .logo-navbar {
+        height: 120px;
+        transform: scale(3.2);
+        transform-origin: center;
+    }
+}
+
+
+
+
 
 /* Navbar che rimane sottile */
 .navbar-tight {

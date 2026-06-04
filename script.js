@@ -115,10 +115,10 @@ attachLiveValidation(passengerAge, ageRegex, 120);
             </div>
 
             <!-- COLONNA DESTRA: LEGENDA -->
-            <div class="col-md-4">
+            <div class="col-md-4 mt-3 mt-md-0">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
-                        <h6 class="card-title">Legenda Sconti</h6>
+                        <h6 class="card-title">Dettaglio Sconti</h6>
 
                         <p class="card-text mb-1">
                             <span class="badge badge-under18">20%</span>

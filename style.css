@@ -47,7 +47,7 @@ body {
 /* Mobile default */
 .logo-navbar {
     height: 120px; /* altezza reale piccola */
-    transform: scale(1.8); /* ingrandimento visivo */
+    transform: scale(2); /* ingrandimento visivo */
     transform-origin: center;
 }
 

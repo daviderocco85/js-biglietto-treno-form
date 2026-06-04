@@ -92,7 +92,7 @@ attachLiveValidation(passengerAge, ageRegex, 120);
                             <img src="assets/img/ItalRail_logo.png" alt="ItalRail Logo" class="card-logo">
                         </div>
 
-                        <h5 class="card-title text-center">Riepilogo Biglietto</h5>
+                        <h5 class="card-title text-center mb-4">Riepilogo Costi</h5>
 
                         <p class="card-text"><strong>Kilometri:</strong> ${km}</p>
                         <p class="card-text"><strong>Età passeggero:</strong> ${age}</p>

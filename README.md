@@ -28,6 +28,10 @@ The program must determine the applicable discount tier, compute the adjusted fa
 
 3. Apply styling to refine the layout and improve the visual presentation of the form, recap section, and final output.
 
+# Form Behavior Note
+The Calcola button uses type="button" to avoid triggering a form submission.
+Since the ticket calculation is handled entirely on the client side, no data is sent and no default action needs to be prevented.
+
 # How to run
 
  Clone or download the project, then open index.html in your browser. Enter the kilometers to travel and the passenger’s age in the input fields to run the ticket price calculation.
